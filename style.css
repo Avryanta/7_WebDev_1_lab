@@ -180,6 +180,13 @@ a.kemsu-link {
     transition: all .5s ease;
 }
 
+.cloud {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
 @media only screen and (max-width: 979px) {
     .item {
         -ms-flex-preferred-size: calc(50% - 30px);

@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="contact-style.css">
+    <title>Связаться со мной</title>
 </head>
 <body>
     
-    <form>      
-        <input name="name" type="text" class="feedback-input" placeholder="Name" />   
-        <input name="email" type="text" class="feedback-input" placeholder="Email" />
-        <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-        <input type="submit" value="SUBMIT"/>
+    <div class="title">
+        Связаться со мной
+    </div>
+
+    <form action="Send.php" method="post">      
+        <input name="name" type="text" class="feedback-input" placeholder="Имя" />   
+        <input name="email" type="text" class="feedback-input" placeholder="Почта" required/>
+        <textarea name="text" class="feedback-input" placeholder="Сообщение..." required></textarea>
+        <input type="submit" value="Отправить"/>
       </form>
 
 </body>

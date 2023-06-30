@@ -12,10 +12,11 @@
 <body>
 
     <div class="format-container">
-        
+
+        <!-- Заголовок -->
         <div class="item">
             <a href="#" class="item_link">
-                
+
                 <div class="item_bg"></div>
 
                 <div class="item_title">Чуркина Марина</div>
@@ -26,38 +27,111 @@
                         <div class="sub_tittle_facet">|</div>
                         <div class="sub-title more">Прикладная информатика</div>
                     </span>
-                </div> 
-
+                </div>
             </a>
         </div>
+        <!-- Заголовок -->
 
-        <div class="item">
-            <div class="text_about_me">
-                <span>
-                    Университет:
-                    <a href="https://kemsu.ru" target="_blank" class="kemsu-link">
-                        <img src="img/kemsu_logo.png" alt="K" class="kemsu-icon">
-                        КемГУ
-                    </a>
-                    <p>Группа: ПИз-191</p>
-                    <p>Дата окончания: 2024 год</p>
-                </span>
+        <!-- Навигация -->
+        <nav>
+            <a href="https://kemsu.ru" target="_blank"> <img src="img/kemsu_logo.png" alt="K"
+                    class="kemsu-icon">КемГУ</a>
+            <a href="#">ПИз-191</a>
+            <a href="#">2023-2024 год</a>
+            <div class="animation start-home"></div>
+        </nav>
+        <!-- Навигация -->
+
+        <!-- Таблица -->
+        <details>
+            <summary>Программирование</summary>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Язык / Инструмент</th>
+                        <th>Время использования</th>
+                        <th>Уровень</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1С</td>
+                        <td>3 года</td>
+                        <td>&#128512;</td>
+                    </tr>
+                    <tr>
+                        <td>C#</td>
+                        <td>4 года</td>
+                        <td>&#128522;</td>
+                    </tr>
+                    <tr>
+                        <td>SQL, NoSQL</td>
+                        <td>4 года</td>
+                        <td>&#129303;</td>
+                    </tr>
+                    <tr>
+                        <td>HTML + CSS</td>
+                        <td>3 года</td>
+                        <td>&#128578;</td>
+                    </tr>
+                    <tr>
+                        <td>Java (Android Studio)</td>
+                        <td>2 года</td>
+                        <td>&#129300;</td>
+                    </tr>
+                    <tr>
+                        <td>R</td>
+                        <td>3 дня</td>
+                        <td>&#129320;</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>1 год</td>
+                        <td>&#129324;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </details>
+        <!-- Таблица -->
+
+        <!-- Список -->
+        <details open>
+            <summary>Хобби</summary>
+            <div>
+                <div class="Hobby">
+                    <p>Игры</p>
+                    <ol>
+                        <li class="l1">The Binding of Isaac: Repentance</li>
+                        <li class="l2">Auto Chess</li>
+                        <li class="l3">Devil Came Through Here Trilogy</li>
+                    </ol>
+                </div>      
             </div>
-        
-        </div>
+        </details>
+        <!-- Список -->
 
+        <!-- Подвал -->
         <div class="item">
             <a href="https://vk.com/avryanta" target="_blank" class="sm-item-link">vk</a>
             <a href="https://telegram.me/avryanta" target="_blank" class="sm-item-link">tg</a>
             <a href="https://github.com/avryanta" target="_blank" class="sm-item-link">gh</a>
             <a href="contact.html" target="_blank" class="sm-item-link contact-me">Связаться со мной</a>
         </div>
+        <!-- Подвал -->
 
     </div>
 
-    <div class="cloud">
-        <img src="img/cloud.png" alt="">
-    </div>
+    <button onclick="myFunction()" class="cloud"><span class="Secret">Секрет...</span></button>
+
+    <div id="snackbar">&#128123; Поставьте троечку, пожалуйста...</div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+        } 
+    </script>
 
 </body>
 

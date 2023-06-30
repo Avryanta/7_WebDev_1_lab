@@ -42,7 +42,7 @@ form {
     border-radius: 5px;
     line-height: 22px;
     background-color: transparent;
-    border: 2px solid #7b1fd6;
+    border: 2px solid #9b59b6;
     transition: all 0.3s;
     padding: 13px;
     margin-bottom: 15px;
@@ -63,11 +63,13 @@ textarea {
 
   [type="submit"] {
     width: 100%;
-    background: #7b1fd6;
+    background: #9b59b6;
     border-radius:5px;
     border:0;
     cursor:pointer;
     color:white;
+    
+    font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     padding-top:10px;
     padding-bottom:10px;

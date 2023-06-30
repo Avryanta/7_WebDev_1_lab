@@ -1,5 +1,5 @@
 body {
-    background-color: #000;
+    background-color: #161616;
 }
 
 a {
@@ -24,8 +24,8 @@ a {
 
 .item_link {
     display: block;
-    padding: 30px 20px;
-    background-color: #121212;
+    padding: 15px 20px;
+    background-color: #0c0c0c;
 
     text-decoration: none;
 
@@ -47,6 +47,23 @@ a {
 
     z-index: 2;
     position: relative;
+}
+
+.item_bg {
+    height: 140px;
+    width: 160px;
+    background-color: #9b59b6;
+
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+
+    border-radius: 50%;
+
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
 }
 
 .sub {
@@ -77,6 +94,216 @@ a {
     float: left;
 }
 
+/* НАВИГАЦИЯ */
+nav {
+    position: relative;
+    background-color: #0c0c0c;
+    font-size: 0;
+    margin: 0 15px 10px;
+    overflow: hidden;
+
+    border-radius: 28px;
+}
+
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+}
+
+nav a:nth-child(1) {
+    width: 100px;
+}
+
+nav a:nth-child(2) {
+    width: 110px;
+}
+
+nav a:nth-child(3) {
+    width: 100px;
+}
+
+nav a:nth-child(4) {
+    width: 160px;
+}
+
+a:nth-child(5) {
+    width: 120px;
+}
+
+nav .start-home, a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+    background-color: #2d2d2d;
+}
+
+nav .start-about, a:nth-child(2):hover~.animation {
+    width: 110px;
+    left: 100px;
+    background-color: #575757
+}
+
+nav .start-blog, a:nth-child(3):hover~.animation {
+    width: 100px;
+    left: 210px;
+    background-color: #828282;
+}
+
+/* НАВИГАЦИЯ */
+
+/* ТАБЛИЦА */
+details {
+    color: #222222;
+    background: #cfcfcf;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    margin: 0 15px 10px;
+    overflow: hidden;
+
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::-moz-list-bullet {
+    list-style-type: none;
+}
+
+summary::marker {
+    display: none;
+}
+
+summary {
+    display: block;
+    padding: .3em .3em .3em 1.4em;
+    font-size: 19px;
+    cursor: pointer;
+    position: relative;
+
+}
+
+summary:before {
+    top: .4em;
+    left: .3em;
+    color: transparent;
+    background: url(img/right.png) no-repeat 50% 50% / 1em 1em;
+    width: 1em;
+    height: 1em;
+    content: "";
+    position: absolute;
+    transition: transform .5s;
+}
+
+details[open]>summary:before {
+    transform: rotateZ(90deg);
+}
+
+summary~* {
+    padding: 0 2em 10px 2em;
+}
+
+details[open] summary~* {
+    animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+summary:focus {
+    outline: 0;
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3), inset 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.table {
+    width: 100%;
+    border: none;
+    background: #cfcfcf;
+    margin-bottom: 20px;
+}
+
+.table thead th {
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    background: #bbbaba;
+    font-size: 14px;
+}
+
+.table thead tr th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.table thead tr th:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.table tbody td {
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.table tbody tr td:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.table tbody tr td:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+/* ТАБЛИЦА */
+
+/* СПИСОК */
+
+.Hobby {
+    float: left;
+}
+
+.l1 {
+    list-style-image: url('img/isaac.ico');
+}
+
+.l2 {
+    list-style-image: url('img/chess.png');
+}
+
+li.l3 {
+    list-style-image: url('img/CatLady.png');
+}
+
+/* СПИСОК */
+
 .sm {
 
     margin: 0 15px 10px;
@@ -92,7 +319,7 @@ a {
 a.sm-item-link {
 
     display: inline-block;
-    background-color: #121212;
+    background-color: #0c0c0c;
 
     padding: 10px 30px;
 
@@ -103,8 +330,14 @@ a.sm-item-link {
 }
 
 a.sm-item-link.contact-me {
-    outline: 1px solid #7b1fd6;
+    outline: 1px solid #9b59b6;
     outline-offset: -3px;
+    transition: 1s;
+}
+
+a.sm-item-link.contact-me:hover {
+    background-color: #9b59b6;
+
 }
 
 .item_link:hover,
@@ -119,73 +352,98 @@ a.sm-item-link.contact-me {
     transform: scale(20);
 }
 
-.about_me {
-
-    -ms-flex-preferred-size: calc(33.33333% - 30px);
-    flex-basis: calc(33.33333% - 30px);
-
-    background-color: #121212;
-
-    margin: 0 15px 10px;
-    overflow: hidden;
-
-    border-radius: 28px;
-}
-
-.text_about_me {
-
-    padding: 10px 20px 10px 20px;
-    color: #FFF;
-    background-color: #121212;
-    line-height: 1ch;
-
-    position: relative;
-
-    -webkit-transition: color .5s ease;
-    -o-transition: color .5s ease;
-    transition: color .5s ease
-}
 
 
 a.kemsu-link {
-    background-color: #121212;
     color: #FFF;
-
     overflow: hidden;
     position: relative;
 }
 
 .kemsu-icon {
-    background-color: #FFF;
+
     margin: 2px 3px -2px 3px;
 
-    width: 15px;
+    width: 18px;
     height: 15px;
 }
 
-.item_bg {
-    height: 140px;
-    width: 160px;
-    background-color: #952aff;
-
-    z-index: 1;
-    position: absolute;
-    top: -75px;
-    right: -75px;
-
-    border-radius: 50%;
-
-    -webkit-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
-}
-
+/* СЕКРЕТ!! */
 .cloud {
+    width: 150px;
+    height: 48px;
     position: absolute;
     left: 0;
     bottom: 0;
+    background-image: url(img/cloud.png);
+    background-color: transparent;
+    /* make the button transparent */
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    /* assuming we don't want any borders */
+    cursor: pointer;
+    /* make the cursor like hovering over an <a> element */
+
+    font-size: 10px;
+    text-align: center;
+    vertical-align: bottom;
 }
 
+.Secret {
+    color: #4d4d4d;
+    position: relative;
+    bottom: -8px;
+    left: -5px;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #ffffff;
+    color: #151515;
+    text-align: center;
+    border-radius: 20px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+/* СЕКРЕТ!! */
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
 
 @media only screen and (max-width: 979px) {
     .item {
